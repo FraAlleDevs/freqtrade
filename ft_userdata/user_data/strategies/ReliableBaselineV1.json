@@ -1,0 +1,37 @@
+{
+  "strategy_name": "ReliableBaselineV1",
+  "params": {
+    "roi": {
+      "0": 0.015,
+      "360": 0.005,
+      "1440": -1
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.01,
+      "trailing_stop_positive_offset": 0.02,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 5
+    },
+    "buy": {
+      "bb_rsi_max_for_entry": 45,
+      "bb_stds": 1.9,
+      "ema_fast_len": 14,
+      "ema_slow_len": 47,
+      "rsi_cross_level": 34,
+      "rsi_ema_confirm": 60,
+      "rsi_len": 17
+    },
+    "sell": {
+      "rsi_sell": 80
+    },
+    "protection": {},
+    "stoploss": {
+      "stoploss": -0.291
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2025-08-17 07:45:10.103128+00:00"
+}

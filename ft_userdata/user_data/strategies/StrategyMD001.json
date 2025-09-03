@@ -1,0 +1,73 @@
+{
+    "strategy_name": "Sma20RsiBbAtrStrategy",
+    "max_open_trades": 3,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+
+    "timeframe": "15m",
+
+    "strategy": "Sma20RsiBbAtrStrategy",
+
+    "exchange": {
+        "name": "binance",
+        "key": "your_api_key_here",
+        "secret": "your_api_secret_here",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT"
+        ],
+        "pair_blacklist": []
+    },
+
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "verbosity": "info",
+        "jwt_secret_key": "something_random_and_secure",
+        "CORS_origins": [],
+        "username": "freqtrade",
+        "password": "freqtrade"
+    },
+
+    "bot_name": "sma20_rsi_bb_atr_bot",
+
+    "initial_state": "running",
+    "forcebuy_enable": true,
+
+    "internals": {
+        "process_throttle_secs": 5
+    },
+
+    "disable_dataframe_checks": false,
+    "bid_strategy": {
+        "price_side": "ask",
+        "ask_last_balance": 0.0,
+        "use_order_book": false
+    },
+
+    "ask_strategy": {
+        "use_order_book": false,
+        "order_types": {
+            "buy": "limit",
+            "sell": "limit",
+            "stoploss": "market",
+            "stoploss_on_exchange": false
+        },
+        "order_time_in_force": {
+            "buy": "gtc",
+            "sell": "gtc"
+        }
+    }
+}

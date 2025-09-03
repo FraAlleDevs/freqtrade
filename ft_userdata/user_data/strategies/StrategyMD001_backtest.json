@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "strategy": "Sma20RsiBbAtrStrategy",
+  "dataformat_ohlcv": "feather",
+  "timeframe": "15m",
+
+  "stake_currency": "USDT",
+  "stake_amount": 100,
+  "max_open_trades": 5,
+  "fee": 0.001,
+
+  "trading_mode": "spot",
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": [
+      "BTC/USDT",
+      "ETH/USDT"
+    ],
+    "pair_blacklist": []
+  },
+
+  "pairlists": [
+    { "method": "StaticPairList" }
+  ],
+
+  "datadir": "user_data/data/binance",
+
+  "bid_strategy": {
+    "price_side": "ask",
+    "use_order_book": false
+  },
+  "ask_strategy": {
+    "use_order_book": false,
+    "order_types": {
+      "buy": "limit",
+      "sell": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    },
+    "order_time_in_force": {
+      "buy": "gtc",
+      "sell": "gtc"
+    }
+  },
+
+  "initial_state": "stopped",
+  "log_level": "info",
+  "custom": {
+    "mode": "mr"
+  }
+}
